@@ -1,6 +1,6 @@
 body{
 	background-color:orange; 
-	text-align:center;
+	text-align:left;
 	align-items: center;
 	padding:25%;
 }
@@ -20,4 +20,8 @@ form{
 	height:30px;
 	width:100%;
 	background-color: white;
+}
+
+.red{
+	background-color: red;
 }

@@ -8,24 +8,27 @@
 
 <body>
     <form action="/create_user" method="POST">
-        First Name:
-        <input type="text" name="first_name" autofocus>
+        Name:<br>
+        <input type="text" name="first_name" placeholder="First" autofocus>
+      
+        <input type="text" name="last_name" placeholder="Last">
+       <br>
+        <br> Choose your username:&emsp;&emsp;
+        <input type="email" name="email">
         <br>
-        <br> Last Name:
-        <input type="text" name="last_name" autofocus>
+        <br> Create a password:&nbsp;&nbsp;<br>
+        <input type="password" name="password">
+       <br>
+        <br>Confirm your password:<br>
+        <input type="password" name="re_password">
         <br>
-        <br> Email:&emsp;&emsp;
-        <input type="email" name="email" autofocus>
-        <br>
-        <br> Password:&nbsp;&nbsp;
-        <input type="text" name="password">
-        <br>
-        <br> &emsp;&emsp;&nbsp;&nbsp;Re-type Password:
-        <input type="text" name="re_password">
-        <br>
-        <br>
-        <input type="submit" value="Create User">
-    </form>
+		<br>
+		<input type="submit" value="Create User">
+		
+	</form>
+	<form action="/create_user" method="POST"">
+		Alert:{{(session['alert_messages']) | safe}}
+	</form>
 
     <form action="/clear">
         <input type="submit" value="Reset">
