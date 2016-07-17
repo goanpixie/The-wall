@@ -1,0 +1,23 @@
+body{
+	background-color:orange; 
+	text-align:center;
+	align-items: center;
+	padding:25%;
+}
+
+form{
+	height:30%;
+	width:50%;
+	background-color: grey;
+	border-radius:5px;
+	padding:10px;
+	text-align:;
+	align-items: left;
+
+}
+
+.result{
+	height:30px;
+	width:100%;
+	background-color: white;
+}

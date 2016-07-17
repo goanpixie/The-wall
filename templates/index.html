@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>wall</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for ('static',filename= 'style.css')}}">
+</head>
+
+<body>
+    <form action="/create_user" method="POST">
+        First Name:
+        <input type="text" name="first_name" autofocus>
+        <br>
+        <br> Last Name:
+        <input type="text" name="last_name" autofocus>
+        <br>
+        <br> Email:&emsp;&emsp;
+        <input type="email" name="email" autofocus>
+        <br>
+        <br> Password:&nbsp;&nbsp;
+        <input type="text" name="password">
+        <br>
+        <br> &emsp;&emsp;&nbsp;&nbsp;Re-type Password:
+        <input type="text" name="re_password">
+        <br>
+        <br>
+        <input type="submit" value="Create User">
+    </form>
+
+    <form action="/clear">
+        <input type="submit" value="Reset">
+    </form>
+
+
+    <form action="/login" method="POST">
+        Email:
+        <input type="email" value="email" name="email">
+        <br>
+        <br> Password:
+        <input type="text" name="password">
+        <br>
+        <br>
+        <input type="submit" value="Login"> 
+        {% with messages = get_flashed_messages() %} 
+        {% if messages %} 
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {%endfor%} {%endif%} {%endwith%}
+    </form>
+</body>
+
+</html>
