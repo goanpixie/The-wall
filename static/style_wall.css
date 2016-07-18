@@ -1,0 +1,13 @@
+*{box-sizing: box-border}
+
+
+body{
+	padding:2%;
+}
+
+h2 h3 form{
+	display:inline;
+	float:left;
+}
+
+

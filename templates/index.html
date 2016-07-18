@@ -8,33 +8,31 @@
 
 <body>
     <form action="/create_user" method="POST">
-        Name:<br>
+        Name:
+        <br>
         <input type="text" name="first_name" placeholder="First" autofocus>
-      
         <input type="text" name="last_name" placeholder="Last">
-       <br>
+        <br>
         <br> Choose your username:&emsp;&emsp;
         <input type="email" name="email">
         <br>
-        <br> Create a password:&nbsp;&nbsp;<br>
+        <br> Create a password:&nbsp;&nbsp;
+        <br>
         <input type="password" name="password">
-       <br>
-        <br>Confirm your password:<br>
+        <br>
+        <br>Confirm your password:
+        <br>
         <input type="password" name="re_password">
         <br>
-		<br>
-		<input type="submit" value="Create User">
-		
-	</form>
-	<form action="/create_user" method="POST"">
-		Alert:{{(session['alert_messages']) | safe}}
-	</form>
-
+        <br>
+        <input type="submit" value="Create User">
+    </form>
+    <form action="/create_user" method="POST">
+        Alert:{{(session['alert_messages']) | safe}}
+    </form>
     <form action="/clear">
         <input type="submit" value="Reset">
     </form>
-
-
     <form action="/login" method="POST">
         Email:
         <input type="email" value="email" name="email">
@@ -43,10 +41,7 @@
         <input type="text" name="password">
         <br>
         <br>
-        <input type="submit" value="Login"> 
-        {% with messages = get_flashed_messages() %} 
-        {% if messages %} 
-        {% for message in messages %}
+        <input type="submit" value="Login"> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
         <p>{{message}}</p>
         {%endfor%} {%endif%} {%endwith%}
     </form>
